@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<h1> Hello From Home Page!! </h1>
+<h1 th:text = "'This Is The Massage From Controller by: ' +${name}"> </h1>
+
+<!--<label for ="fullname">Full Name: </label>-->
+<!--<input type="text" id="fullname" />-->
+
+<!--<label for="age">Age: </label>-->
+<!--<input type="number" id="age" />-->
+
+<!--<label for = "email">Email: </label>-->
+<!--<input type="email" id="email"/>-->
+
+<!--<button type="submit">Submit Data</button>-->
+<h3>Please Enter Your Data</h3>
+<p th:text="${success}"></p>
+<form action="#" th:action="@{/submit}" method="POST">
+    <label for ="fullname">Full Name: </label>
+    <input type="text" id="fullname" name="fullname"  />
+
+    <label for="age">Age: </label>
+    <input type="number" id="age" name="age" />
+
+    <label for = "email">Email: </label>
+    <input type="email" id="email" name="email" />
+
+    <button type="submit">Submit Data</button>
+
+</form>
+<a href="/user-details"> go to user details</a>
+<br>
+<a href="/another-page"> Another Page</a>
+<a href="/modelpage">modelPage</a>
+<a href="/modelandview">modelandview</a>
+</body>
+</html>
